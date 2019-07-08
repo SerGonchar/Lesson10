@@ -24,7 +24,6 @@ public class GeneratorPerson {
 
         Person[] listOfPerson = new Person[100];
 
-
         for (int i = 0; i < listOfPerson.length; i++) {
             Person person = new Person(generateName(), generateSurName());
             person.setAge(generateAge());
@@ -34,20 +33,21 @@ public class GeneratorPerson {
         }
 
         for (Person ofPerson : listOfPerson) {
-            System.out.format(ofPerson.getName() + " " + ofPerson.getSurName() + " , age " + ofPerson.getAge() +
-                    " , haight " + ("%.2f%n"ofPerson.getHeight()) + " , weight " + ofPerson.getWeigt());//здесь доб....
+            System.out.println(ofPerson.getName() + " " + ofPerson.getSurName()
+                    + ",   возраст " + ofPerson.getAge()
+                    + ",   рост " + ofPerson.getHeight() + " см"
+                    + ",   вес " + ofPerson.getWeigt() + " кг");
         }
-
     }
 
-    private static double generateHeight() {
-        return  160 + Math.random() * 200 - 160;
-
+    private static int generateHeight() {
+        Random random = new Random();
+        return random.nextInt(200 - 165) + 165;
     }
 
-    private static double generateWeight() {
-
-        return 60 + Math.random() * 120 - 60;
+    private static int generateWeight() {
+        Random random = new Random();
+        return random.nextInt(120 - 60) + 60;
     }
 
     private static int generateAge() {

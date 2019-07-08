@@ -7,8 +7,8 @@ public class Person {
     private String name ;
     private String surName;
     private int age;
-    private double weigt;
-    private double height;
+    private int weigt;
+    private int height;
 
     public Person(String name, String surName) {
         this.name = name;
@@ -39,19 +39,19 @@ public class Person {
         this.age = age;
     }
 
-    public double getWeigt() {
+    public int getWeigt() {
         return weigt;
     }
 
-    public void setWeigt(double weigt) {
+    public void setWeigt(int weigt) {
         this.weigt = weigt;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 }
