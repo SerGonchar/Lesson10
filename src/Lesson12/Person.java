@@ -4,7 +4,7 @@ package Lesson12;
 
 
 public class Person {
-    private String name ;
+    private String name;
     private String surName;
     private int age;
     private int weigt;

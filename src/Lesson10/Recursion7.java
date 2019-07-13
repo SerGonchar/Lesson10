@@ -1,16 +1,17 @@
-package Lesson10;//7*. Вывести все перестановки строки используя рекурсию
+package Lesson10;
+//7*. Вывести все перестановки строки используя рекурсию
 
 public class Recursion7 {
 
-    static int count = 0;
+    private static int count = 0;
 
     public static void main(String[] args) {
-        String word = "abcdef";
+        String word = "spider";
         permutation(word);
-        System.out.println("" + count);
+        System.out.println(count + "  Вариантов");
     }
 
-    public static void permutation(String str) {
+    private static void permutation(String str) {
         permutation("", str);
     }
 
